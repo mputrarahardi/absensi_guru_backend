@@ -30,4 +30,9 @@ class UserController extends Controller
 
         return response()->json(['status' => 'success', 'user' => $user]);
     }
+
+    public function profile(Request $request)
+    {
+        return response()->json($request->user(), 200);
+    }
 }
